@@ -6,4 +6,9 @@
   display: inline-block;
 }
 
+.no-click{
+
+  pointer-events: none;
+}
+
 

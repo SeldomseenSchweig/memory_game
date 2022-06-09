@@ -64,23 +64,30 @@ let clickArrayId = [];
 // TODO: Implement this function!
 function handleCardClick(event) {
 
+
+
   // you can use event.target to see which element was clicked
   console.log("you just clicked", event.target);
+   // change background of div to color
 
 
-
+if (clickArray.length < 2) {
   event.target.style.background = event.target.className;
-
-
-clickArray.push(event.target.className);
-clickArrayId.push(event.target.id)
+  clickArray.push(event.target.className); //push classname into array
+clickArrayId.push(event.target.id) // push if into array
+}
+// check for match
 if (clickArray[0] === clickArray[1] && clickArrayId[0] !== clickArrayId[1])  {
-
 console.log("Match!")
+
 
 clickArray = [];
 clickArrayId = [];
 }else if (clickArray.length === 2){
+
+
+  
+  
 
    setTimeout(() => {
      document.getElementById(clickArrayId[0]).style.backgroundColor = "white"; //Trying to set a timer on divs by Id
@@ -93,8 +100,6 @@ clickArrayId = [];
 
 
 
-}else if( clickArray > 2 ) {
-  return;
 }
 
 
