@@ -82,19 +82,21 @@ clickArray = [];
 clickArrayId = [];
 }else if (clickArray.length === 2){
 
-  console.log(clickArrayId[0]);
-  console.log(clickArrayId[1]);
-
    setTimeout(() => {
      document.getElementById(clickArrayId[0]).style.backgroundColor = "white"; //Trying to set a timer on divs by Id
      document.getElementById(clickArrayId[1]).style.backgroundColor = "white";
+     clickArray = [];
+     clickArrayId = [];
+     
    }, 1000);
 
-  
 
-  clickArray = [];
-  clickArrayId = [];
+
+
+}else if( clickArray > 2 ) {
+  return;
 }
+
 
 
    
